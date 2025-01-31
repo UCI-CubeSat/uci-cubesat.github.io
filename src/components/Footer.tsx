@@ -1,17 +1,40 @@
-
+import "./FooterStyle.css";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { GoArrowUpRight } from "react-icons/go";
 
 const Footer = () => {
-    return ( 
-        <div className="flex flex-col gap-y-2 text-xs text-neutral-500 items-center justify-center w-screen bg-black p-5 px-7">
-            <span>
-                UCI CubeSat - University of California, Irvine - ICF 103, Irvine, CA, 92697
-            </span>
-            <div className="flex flex-row gap-x-2">
-            <a href="https://uci.edu/privacy/" className="underline hover:text-white">Privacy Notice</a> /
-            <a href="https://uci.edu/copyright/" className="underline hover:text-white">© 2025 UC Regents</a>
+    return (
+        <>
+            <div>
+                <h1 id="connected-header">Stay Connected</h1>
+                <div className="socials-box">
+                    <div className="icons-box">
+                        <div id="instagram-box">
+                            <a href="https://www.instagram.com/ucicubesat?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                                <FaInstagram id="instagram-logo"/>
+                            </a>
+                            <a href="https://www.instagram.com/ucicubesat?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                                <p>@ucicubesat</p>
+                            </a>
+                        </div>
+                        <div id="linkedin-box">
+                            <a href="https://www.linkedin.com/company/uci-cubesat/">
+                                <FaLinkedin id="linkedin-logo"/>
+                            </a>
+                        </div>
+                    </div>
+                    <div className="contact-info">
+                        <div id="joinus-box">
+                            <p>Join Us</p>
+                            <GoArrowUpRight id="joinus-arrow"/>
+                        </div>
+                        <p>Based in Irvine, CA</p>
+                        <p>team.ucicubesat@gmail.com</p>
+                    </div>
+                </div>
             </div>
-        </div>
-     );
-}
- 
+        </>
+    );
+};
+
 export default Footer;
