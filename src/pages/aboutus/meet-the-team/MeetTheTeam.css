@@ -1,0 +1,180 @@
+.our-mission-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.mission-text {
+  width: 60%;
+  color: white;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.mission-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  font-family: 'Konkhmer Sleokchher', sans-serif;
+}
+
+.mission-text h1::after {
+  content: "";
+  flex-grow: 1;
+  height: 2px;
+  background-color: white;
+  margin-left: 20px;
+}
+
+.mission-text p {
+  font-family: 'Kufam', sans-serif;
+}
+
+.mission-image {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  aspect-ratio: 1;
+}
+
+.mission-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.meet-the-team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 60px 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+  font-family: 'Konkhmer Sleokchher', sans-serif;
+}
+
+.header h1 .highlight {
+  color: #8a2be2;
+}
+
+.header p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 10px;
+  font-family: 'Kufam', sans-serif;
+}
+
+.roles-navigation {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 30px 0;
+  font-size: 16px;
+  font-family: 'Kufam', sans-serif;
+}
+
+.roles-navigation a {
+  color: #c0c0c0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.roles-navigation a:hover,
+.roles-navigation a.active {
+  color: white;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.member-photo {
+  width: 120px;
+  height: 120px;
+  background-color: #606060;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.member-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info {
+  font-size: 14px;
+  font-family: 'Kufam', sans-serif;
+}
+
+.member-info h3 {
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.member-info a {
+  color: #8a2be2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.member-info a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .our-mission-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mission-text {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mission-image {
+    width: 100%;
+  }
+
+  .mission-text h1::after {
+    display: none;
+  }
+} 
