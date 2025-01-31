@@ -1,16 +1,29 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import './index.css';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import Layout from './components/Layout'
+import './index.css'
 
-import Home from './home/Home';
+// Import pages
+import Home from './pages/home/Home.tsx'
+import AboutUs from './pages/aboutus/AboutUs.tsx'
+import Contact from './pages/contact/Contact.tsx'
+import WhatWeDo from './pages/aboutus/what-we-do/WhatWeDo.tsx'
+import MeetTheTeam from './pages/aboutus/meet-the-team/MeetTheTeam.tsx'
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>,
-);
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/aboutus/what-we-do" element={<WhatWeDo />} />
+          <Route path="/aboutus/meet-the-team" element={<MeetTheTeam />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Layout>
+    </Router>
+  </React.StrictMode>,
+)
