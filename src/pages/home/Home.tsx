@@ -1,4 +1,5 @@
 import './Home.css';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     return (
@@ -13,9 +14,9 @@ export default function Home() {
                         technology with the ASPIN lab at UCI, we aim to set a standard for
                         future student-led space mission and research at UCI.
                     </p>
-                    <a href="/aboutus">
+                    <Link to="/aboutus">
                         <button>Read More</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
             <div className="stat-fragment">
@@ -47,9 +48,9 @@ export default function Home() {
                         <p>Our mission is to test innovative thermal management technology in space, while 
                             providing hands-on experience to future leaders in aerospace engineering.
                         </p>
-                        <a href="/aboutus">
+                        <Link to="/aboutus/meet-the-team">
                             <button>Meet The Team</button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

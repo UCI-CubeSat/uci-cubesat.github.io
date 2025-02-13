@@ -5,11 +5,11 @@ import Layout from './components/Layout'
 import './index.css'
 
 // Import pages
-import Home from './pages/home/Home.tsx'
-import AboutUs from './pages/aboutus/AboutUs.tsx'
-import Contact from './pages/contact/Contact.tsx'
-import WhatWeDo from './pages/aboutus/what-we-do/WhatWeDo.tsx'
-import MeetTheTeam from './pages/aboutus/meet-the-team/MeetTheTeam.tsx'
+import Home from './pages/home/Home'
+import AboutUs from './pages/aboutus/AboutUs'
+import Contact from './pages/contact/Contact'
+import WhatWeDo from './pages/aboutus/what-we-do/WhatWeDo'
+import MeetTheTeam from './pages/aboutus/meet-the-team/MeetTheTeam'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>

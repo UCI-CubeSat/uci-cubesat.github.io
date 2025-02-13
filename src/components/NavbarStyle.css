@@ -6,6 +6,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    position: relative;
+    z-index: 1000;
 }
 
 .btnbox {
@@ -53,23 +55,28 @@
 .dropdown-content {
     display: flex;
     flex-direction: column;
-    position: center;
+    position: absolute;
     top: 100%;
     left: 0;
     background-color: black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 85px;
-    z-index: 1;
+    min-width: 160px;
+    z-index: 1000;
 }
 
 /* Dropdown items */
 .dropdown-item {
-    padding: 10px;
+    padding: 10px 20px;
     text-align: left;
     color: white;
     text-decoration: none;
     transition: background-color 0.3s ease;
     font-family: Comfortaa;
+    white-space: nowrap;
+}
+
+.dropdown-item:hover {
+    background-color: #333;
 }
 
 .dropdown-item:last-child {
