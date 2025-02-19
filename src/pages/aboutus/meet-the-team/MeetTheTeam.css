@@ -93,16 +93,27 @@
   font-family: 'Kufam', sans-serif;
 }
 
-.roles-navigation a {
+.roles-navigation button {
+  background: none;
+  border: none;
   color: #c0c0c0;
-  text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  font-family: 'Kufam', sans-serif;
 }
 
-.roles-navigation a:hover,
-.roles-navigation a.active {
+.roles-navigation button:hover {
   color: white;
+  background-color: rgba(138, 43, 226, 0.1);
+}
+
+.roles-navigation button.active {
+  color: white;
+  background-color: #8a2be2;
 }
 
 .team-grid {
@@ -149,10 +160,19 @@
   font-weight: 600;
 }
 
+.member-info .position {
+  color: #8a2be2;
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .member-info a {
   color: #8a2be2;
   text-decoration: none;
   font-weight: 500;
+  display: block;
+  margin: 5px 0;
 }
 
 .member-info a:hover {

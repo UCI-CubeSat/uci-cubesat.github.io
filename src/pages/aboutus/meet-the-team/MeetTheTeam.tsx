@@ -1,29 +1,296 @@
+import { useState } from 'react';
 import './MeetTheTeam.css';
 
 const MeetTheTeam = () => {
+  const [activeRole, setActiveRole] = useState("All");
+  
   const teamMembers = [
     {
       name: "Shivank Valiya",
-      role: "Project Manager",
-      image: "", // Replace with the team member's image URL
+      role: "Executive",
+      position: "Project Manager",
+      image: "",
     },
     {
       name: "Alex Amadeo-Ranch",
-      role: "Executive Assistant",
-      image: "", // Replace with the team member's image URL
+      role: "Executive",
+      position: "Chief Integration Officer",
+      image: "",
     },
-    // Add more members as needed
+    {
+      name: "Praneet Iddamsetty",
+      role: "Executive",
+      position: "Chief Software Engineer",
+      image: "",
+    },
+    {
+      name: "Erick Rosales",
+      role: "Executive",
+      position: "Chief Hardware Engineer",
+      image: "",
+    },
+    {
+      name: "Abhigyan Arya",
+      role: "Avionics",
+      position: "Subteam Lead",
+      image: "",
+    },
+    {
+      name: "Sansshita Baskaran",
+      role: "Avionics",
+      position: "Hardware Lead",
+      image: "",
+    },
+    {
+      name: "Elian Hijmans Malessy",
+      role: "Avionics",
+      position: "Software Lead",
+      image: "",
+    },
+    {
+      name: "Zarif Hossain",
+      role: "Avionics",
+      position: "Software",
+      image: "",
+    },
+    {
+      name: "Kyle Tran",
+      role: "Avionics",
+      position: "Software",
+      image: "",
+    },
+    {
+      name: "Sahil Dhaktode",
+      role: "Avionics",
+      position: "Software",
+      image: "",
+    },
+    {
+      name: "Colton Kaneria",
+      role: "Avionics",
+      position: "Hardware",
+      image: "",
+    },
+    {
+      name: "Rohit De",
+      role: "Avionics",
+      position: "Hardware",
+      image: "",
+    },
+    {
+      name: "Cosmo Daniels",
+      role: "Avionics",
+      position: "Hardware",
+      image: "",
+    },
+    {
+      name: "Andrew Liu",
+      role: "Avionics",
+      position: "Hardware",
+      image: "",
+    },
+    {
+      name: "Joel Akiyoshi",
+      role: "Communications",
+      position: "Software",
+      image: "",
+    },
+    {
+      name: "Alex Ikeda",
+      role: "Communications",
+      position: "Software",
+      image: "",
+    },
+    {
+      name: "Jonathan Lin",
+      role: "Communications",
+      position: "Hardware",
+      image: "",
+    },
+    {
+      name: "Navish Sinha",
+      role: "Communications",
+      position: "Hardware",
+      image: "",
+    },
+    {
+      name: "Styles Shortridge",
+      role: "Communications",
+      position: "Hardware",
+      image: "",
+    },
+    {
+      name: "Marc Raymundo",
+      role: "Communications",
+      position: "Hardware",
+      image: "",
+    },
+    {
+      name: "Sriharshini Gubbala",
+      role: "Operations",
+      position: "Subteam Lead",
+      image: "",
+    },
+    {
+      name: "Alexander Nguyen",
+      role: "Operations",
+      position: "Finance",
+      image: "",
+    },
+    {
+      name: "Claire Phan",
+      role: "Operations",
+      position: "Webmaster",
+      image: "",
+    },
+    {
+      name: "Byren Cheema",
+      role: "Operations",
+      position: "Webmaster",
+      image: "",
+    },
+    {
+      name: "Nathan Nguyen",
+      role: "Operations",
+      position: "Webmaster",
+      image: "",
+    },
+    {
+      name: "Aaditya Borse",
+      role: "Operations",
+      position: "Marketing",
+      image: "",
+    },
+    {
+      name: "Matthew Quach",
+      role: "Operations",
+      position: "Marketing",
+      image: "",
+    },
+    {
+      name: "Supreya Saxena",
+      role: "Operations",
+      position: "Executive Assistant",
+      image: "",
+    },
+    {
+      name: "Fabian Hernandez",
+      role: "Power",
+      position: "Hardware Lead",
+      image: "",
+    },
+    {
+      name: "Hee Jean Kwon",
+      role: "Power",
+      position: "Software Lead",
+      image: "",
+    },
+    {
+      name: "Jenavieve Steward",
+      role: "Power",
+      position: "Hardware",
+      image: "",
+    },
+    {
+      name: "Andy Li",
+      role: "Power",
+      position: "Hardware",
+      image: "",
+    },
+    {
+      name: "Mihir Mehta",
+      role: "Power",
+      position: "Software",
+      image: "",
+    },
+    {
+      name: "Hussain Mahuvawala",
+      role: "Power",
+      position: "Software",
+      image: "",
+    },
+    {
+      name: "Gloria McMaster-Sanchez",
+      role: "Structures",
+      position: "Subteam Lead",
+      image: "",
+    },
+    {
+      name: "Charles Maldonado Rios",
+      role: "Structures",
+      position: "Burn Wire Development & 3D Modeling",
+      image: "",
+    },
+    {
+      name: "Emmanuel Bivian",
+      role: "Structures",
+      position: "3D Modeling",
+      image: "",
+    },
+    {
+      name: "Alan Duong",
+      role: "Structures",
+      position: "Assembly Engineer",
+      image: "",
+    },
+    {
+      name: "Isaiah Lu",
+      role: "Structures",
+      position: "Assembly Engineer",
+      image: "",
+    },
+    {
+      name: "Keiko Yamamuro",
+      role: "Structures",
+      position: "Simulations Engineer",
+      image: "",
+    },
+    {
+      name: "Sonia Cruze",
+      role: "Systems",
+      position: "Subteam Lead",
+      image: "",
+    },
+    {
+      name: "Marco Cheng",
+      role: "Systems",
+      position: "Integration and Design",
+      image: "",
+    },
+    {
+      name: "Sijia Zhang",
+      role: "Systems",
+      position: "Integration and Design",
+      image: "",
+    },
+    {
+      name: "Xavier Marciano",
+      role: "Systems",
+      position: "Integration and Design",
+      image: "",
+    },
+    {
+      name: "Nicholas Lins",
+      role: "Systems",
+      position: "Software Architect",
+      image: "",
+    },
   ];
 
   const roles = [
+    "All",
     "Executive",
     "Avionics",
     "Communications",
+    "Operations",
     "Power",
     "Structures",
-    "Dev Ops",
     "Systems",
   ];
+
+  const filteredMembers = activeRole === "All" 
+    ? teamMembers 
+    : teamMembers.filter(member => member.role === activeRole);
 
   return (
     <>
@@ -58,18 +325,18 @@ const MeetTheTeam = () => {
           </p>
         </div>
         <div className="roles-navigation">
-          {roles.map((role, index) => (
-            <a
-              key={index}
-              href={`#${role.toLowerCase()}`}
-              className={index === 0 ? "active" : ""}
+          {roles.map((role) => (
+            <button
+              key={role}
+              onClick={() => setActiveRole(role)}
+              className={activeRole === role ? "active" : ""}
             >
               {role}
-            </a>
+            </button>
           ))}
         </div>
         <div className="team-grid">
-          {teamMembers.map((member, index) => (
+          {filteredMembers.map((member, index) => (
             <div className="team-member" key={index}>
               <div className="member-photo">
                 {member.image ? (
@@ -80,6 +347,7 @@ const MeetTheTeam = () => {
               </div>
               <div className="member-info">
                 <h3>{member.role}</h3>
+                <p className="position">{member.position}</p>
                 <a href={`#${member.name.replace(" ", "-").toLowerCase()}`}>
                   {member.name}
                 </a>
