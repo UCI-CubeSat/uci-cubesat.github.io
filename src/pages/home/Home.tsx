@@ -14,7 +14,7 @@ export default function Home() {
                         technology with the ASPIN lab at UCI, we aim to set a standard for
                         future student-led space mission and research at UCI.
                     </p>
-                    <Link to="/aboutus">
+                    <Link to="/aboutus/what-we-do">
                         <button>Read More</button>
                     </Link>
                 </div>

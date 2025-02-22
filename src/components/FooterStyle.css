@@ -1,5 +1,6 @@
 #connected-header {
     margin-left: 10%;
+    margin-top: 50px;
     font-size: 50px;
     font-family: 'Konkhmer Sleokchher';
     font-weight: 400;
@@ -15,17 +16,16 @@ p {
 .socials-box {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .icons-box {
     width: 40%;
-    margin-bottom: 30px;
 }
 
 .contact-info {
     width: 40%;
     text-align: right;
-    margin-bottom: 30px;
 }
 
 #instagram-box {

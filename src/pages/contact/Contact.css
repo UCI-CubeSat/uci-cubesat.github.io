@@ -1,19 +1,81 @@
-.contact-container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.contact-container{
+    display: flex;
+    width: 100%;
+    margin-bottom: 10%;
 }
 
-.contact-container h1 {
+.input-form{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.input-form button{
+    background-color: gray;
+    width: 50%;
+    height: 50px;
+    margin-right: 15%;
+}
+
+.input-form input{
+    width: 50%;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-right: 15%;
+    border-bottom: 3px solid;
+    border-color: #D9D9D9;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+}
+
+.contact-info-box{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding-top: 10%;
+}
+
+h1{
     font-family: 'Konkhmer Sleokchher', sans-serif;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    text-align: center;
+    line-height: 1.3;
 }
 
-.contact-container p {
+#header1{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+
+#header2{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+}
+
+.line{
+    display: inline-block;
+    width: 500px;
+    height: 2px; 
+    background-color: white;
+    vertical-align: middle;
+}
+
+.contacts{
+    margin-top: 10%;
+}
+
+.contacts h3{
+    width: 300px;
     font-family: sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: center;
-} 
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
