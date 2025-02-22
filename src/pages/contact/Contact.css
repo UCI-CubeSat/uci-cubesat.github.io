@@ -61,7 +61,7 @@ h1{
 
 .line{
     display: inline-block;
-    width: 500px;
+    width: 45vh;
     height: 2px; 
     background-color: white;
     vertical-align: middle;
