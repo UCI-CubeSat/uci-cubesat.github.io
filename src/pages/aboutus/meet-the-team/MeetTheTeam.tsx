@@ -15,7 +15,7 @@ const MeetTheTeam = () => {
       name: "Alex Amadeo-Ranch",
       role: "Executive",
       position: "Chief Integration Officer",
-      image: "",
+      image: "/Headshots/Alex_R.png",
     },
     {
       name: "Praneet Iddamsetty",
@@ -27,7 +27,7 @@ const MeetTheTeam = () => {
       name: "Erick Rosales",
       role: "Executive",
       position: "Chief Hardware Engineer",
-      image: "",
+      image: "/Headshots/Erick.png",
     },
     {
       name: "Abhigyan Arya",
@@ -129,7 +129,7 @@ const MeetTheTeam = () => {
       name: "Sriharshini Gubbala",
       role: "Operations",
       position: "Subteam Lead",
-      image: "",
+      image: "/Headshots/Sri.png",
     },
     {
       name: "Alexander Nguyen",
@@ -177,13 +177,13 @@ const MeetTheTeam = () => {
       name: "Fabian Hernandez",
       role: "Power",
       position: "Hardware Lead",
-      image: "",
+      image: "/Headshots/Fabian.png",
     },
     {
       name: "Hee Jean Kwon",
       role: "Power",
       position: "Software Lead",
-      image: "",
+      image: "/Headshots/Jean.png",
     },
     {
       name: "Jenavieve Steward",
@@ -213,7 +213,7 @@ const MeetTheTeam = () => {
       name: "Gloria McMaster-Sanchez",
       role: "Structures",
       position: "Subteam Lead",
-      image: "",
+      image: "/Headshots/Gloria.png",
     },
     {
       name: "Charles Maldonado Rios",
@@ -249,7 +249,7 @@ const MeetTheTeam = () => {
       name: "Sonia Cruze",
       role: "Systems",
       position: "Subteam Lead",
-      image: "",
+      image: "/Headshots/Sonia.png",
     },
     {
       name: "Marco Cheng",
@@ -311,7 +311,7 @@ const MeetTheTeam = () => {
           </p>
         </div>
         <div className="mission-image">
-          <img src="/placeholder.png" alt="Mission Placeholder" />
+          <img src="/photos/Mission.png" alt="Mission Placeholder" />
         </div>
       </div>
       <div className="meet-the-team-container">

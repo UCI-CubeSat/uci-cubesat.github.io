@@ -35,7 +35,7 @@ export default function Home() {
             </div>
             <div className="about-fragment">
                 <div id="WWA-image-box">
-                    <h1>Image goes here</h1>
+                    <img src="/photos/Home_Page.png" style={{ width: "300px", height: "auto" }}/>
                 </div>
                 <div id="WWA-description-box">
                     <div id="WWA-description">
