@@ -89,6 +89,40 @@
     font-size: 18px;
 }
 
+@media screen and (max-width: 400px){
+    .welcome-fragment {
+        height: 100vh;
+        width: 100vw;
+        max-width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-position: 65% 50%;
+    }
+
+    .welcome-description {
+        margin-left: 8%;
+        margin-right: 8%;
+        width: 84%;
+    }
+
+    .welcome-description h1 {
+        display: none;
+    }
+
+    .welcome-description h2 {
+        font-size: 30px;
+        color: white;
+    }
+
+    .welcome-description p {
+        width: 100%;
+    }
+}
+
+
+
 /* CubeSat statistic division style */
 .stat-fragment {
     height: 350px;
@@ -176,6 +210,12 @@
     width: 20%;
 }
 
+@media screen and (max-width: 400px){
+    .stat-fragment {
+        display: none;
+    }
+}
+
 /* Who we are style */
 .about-fragment {
     background-color: black;
@@ -254,6 +294,12 @@
     font-size: 18px;
 }
 
+@media screen and (max-width: 400px){
+    .about-fragment {
+        display: none;
+    }
+}
+
 /* Sponsors section */
 .sponsors-fragment {
     background-color: black;
@@ -279,3 +325,9 @@
     background-color: transparent;
     border-radius: 10px;
 } 
+
+@media screen and (max-width: 400px){
+    .sponsors-fragment {
+        display: none;
+    }
+}
