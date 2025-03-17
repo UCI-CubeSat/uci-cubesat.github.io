@@ -82,3 +82,20 @@
 .dropdown-item:last-child {
     border-bottom: none;
 } 
+
+@media screen and (min-width: 401px){
+    .mobile-navbar {
+        display: none;
+    }
+}
+
+/* Mobile NavBar */
+@media screen and (max-width: 400px){
+    .navbar {
+        display: none;
+    }
+
+    .mobile-navbar {
+        display: block;
+    }
+}
