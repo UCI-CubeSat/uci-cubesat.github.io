@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import { IoCloseCircleSharp } from "react-icons/io5";
+
 
 import "./NavbarStyle.css";
 
@@ -56,14 +58,27 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="mobile-navbar">
-                <button className="hamburger-menu" onClick={toggleMobileMenu}><FaBars /></button>
+                <div className="navbar-header">
+                    <Link to="/home">
+                        <img
+                            src="/images/CubeSat_logo.png"
+                            alt="CubeSat logo"
+                            width={70}
+                            height={70}
+                        />
+                    </Link>
+                    <button className="hamburger-menu" onClick={toggleMobileMenu}><FaBars /></button>
+                </div>
 
                 {isMobileMenuOpen && (
-                    <div className="mobile-menu">
-                        <Link to="/home" className="mobile-item">Home</Link>
-                        <Link to="/aboutus/what-we-do" className="mobile-item">What We Do</Link>
-                        <Link to="/aboutus/meet-the-team" className="mobile-item">Meet the Team</Link>
-                        <Link to="/contact" className="mobile-item">Contact</Link>
+                    <div className={"mobile-menu"}>
+                        <button onClick={toggleMobileMenu}><IoCloseCircleSharp /></button>
+                        <div className="btn-box">
+                            <Link  onClick={toggleMobileMenu} to="/home" className="mobile-item">HOME</Link>
+                            <Link onClick={toggleMobileMenu} to="/aboutus/what-we-do" className="mobile-item">ABOUT</Link>
+                            <Link onClick={toggleMobileMenu} to="/aboutus/meet-the-team" className="long-mobile-item">MEET THE TEAM</Link>
+                            <Link onClick={toggleMobileMenu} to="/contact" className="mobile-item">CONTACT</Link>
+                        </div>
                     </div>
                 )}
             </div>
