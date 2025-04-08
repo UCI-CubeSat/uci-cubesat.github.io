@@ -63,7 +63,7 @@ h1{
     display: inline-block;
     width: 45vh;
     height: 2px; 
-    background-color: white;
+    background-color: #D9D9D9BF;
     vertical-align: middle;
 }
 
@@ -78,4 +78,51 @@ h1{
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 10px;
+}
+
+@media screen and (max-width: 400px){
+    .contact-container{
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    .input-form{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-form input{
+        margin-right: 0;
+        width: 80%;
+    }
+
+    .input-form button{
+        background-color: gray;
+        width: 80%;
+        height: 50px;
+        margin-right: 0;
+    }
+
+    .contact-info-box{
+        height: 30vh;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .contact-info-box h1{
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .line{
+        display: inline-block;
+        width: 45vw;
+        height: 2px; 
+        vertical-align: middle;
+    }
+
+    .contacts{
+        display: none;
+    }
 }
