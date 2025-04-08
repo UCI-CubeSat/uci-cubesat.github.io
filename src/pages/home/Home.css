@@ -211,8 +211,83 @@
 }
 
 @media screen and (max-width: 400px){
-    .stat-fragment {
+    .stat-fragment::before{
         display: none;
+    }
+
+    #mobile-background{
+        background-image: url(/images/stats_BG.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        z-index: 0;
+    }
+
+    #mobile-background::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Adjust the alpha (0.0 to 1.0) for darkness */
+        z-index: -1; /* Behind the content */
+      }
+      
+
+    .stat-fragment{
+        background-image: none;
+        margin-bottom: 25%;
+    }
+
+    #mid-card{
+        justify-content: end;
+        width: 60%;
+        position: relative;
+        z-index: 1;
+    }
+    
+    #mid-card h1{
+        font-size: 50px;
+    }
+
+    #mid-card h2{
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    #left-card{
+        width: 50%;
+        position: relative;
+        z-index: 2;
+        margin-right: -30%;
+       
+    }
+
+    #left-card h1{
+        font-size: 40px;
+    }
+
+    #left-card h2{
+        font-size: 15px;
+        font-weight: 700;
+    }
+
+    #right-card{
+        width: 50%;
+        position: relative;
+        z-index: 2;
+        margin-left: -30%;
+    }
+
+    #right-card h1{
+        font-size: 40px;
+    }
+
+    #right-card h2{
+        font-size: 15px;
+        font-weight: 700;
     }
 }
 
@@ -225,7 +300,6 @@
 }
 
 #WWA-image-box {
-    background-color: black;
     width: 50%;
     display: flex;
     justify-content: flex-end;
@@ -238,7 +312,6 @@
 }
 
 #WWA-description-box {
-    background-color: black;
     width: 50%;
     display: flex;
     justify-content: flex-start;
@@ -265,11 +338,16 @@
     font-weight: 100;
     font-size: 15px;
     line-height: 1.4;
+    margin-bottom: 1em;
+}
+
+#mobile-description{
+    display: none;
 }
 
 #WWA-description a {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 25px;
     text-align: left;
     text-decoration: none;
 }
@@ -296,7 +374,46 @@
 
 @media screen and (max-width: 400px){
     .about-fragment {
+        background-color: transparent;
+        /* background-color: green; */
+        display: flex;
+        align-items: center;        
+    }
+
+    #WWA-image-box {
         display: none;
+    }
+
+    #WWA-description-box{
+        background-color: #241849;
+        border-radius: 15px;
+        height: 90%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #desktop-description{
+        display: none;
+    }
+
+    #mobile-description{
+        display: block;
+    }
+
+    #WWA-description{
+        margin: 0;
+        width: 80%;
+    }
+
+    #WWA-description h1{
+        font-size: 30px;
+        display: flex;
+        justify-content: start;
+    }
+
+    #WWA-description p{
+        font-size: 14px;
     }
 }
 
@@ -324,10 +441,71 @@
     padding: 20px;
     background-color: transparent;
     border-radius: 10px;
-} 
+}
+
+#carousel-slider{
+    display: none;
+}
 
 @media screen and (max-width: 400px){
-    .sponsors-fragment {
+    .sponsors-fragment{
+        background-color: transparent;
+    }
+
+    .sponsor-row{
         display: none;
+    }
+
+    #sponsors-header{
+        font-size: 30px;
+        margin: 0;
+    }
+
+    #carousel-slider{
+        height: 250px;
+        margin: auto;
+        display: grid;
+        position: relative;
+        width: 90%;
+        place-items: center;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .slide-track{
+        display: flex;
+        width: calc(250px * 8);
+        pointer-events: auto;
+        animation: scroll 20s linear infinite;
+        transition: animation-play-state 0.3s ease;
+    }
+
+    #carousel-slider:hover .slide-track{
+        animation-play-state: paused;
+    }
+
+    @keyframes scroll {
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-250px * 4));
+        }
+    }
+
+    .slide{
+        height: 200px;
+        width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px;
+        box-sizing: border-box;
+        /* background-color: blue; */
+    }
+
+    .slide img{
+        height: auto;
+        object-fit: contain;
     }
 }
