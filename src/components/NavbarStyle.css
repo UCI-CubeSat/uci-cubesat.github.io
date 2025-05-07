@@ -45,6 +45,15 @@
     background-color: white;
 }
 
+/* Dropdown Animation */
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: none; }
+}
+.dropdown-content {
+  animation: dropdownFadeIn 0.32s cubic-bezier(.4,0,.2,1);
+}
+
 /* Dropdown Container */
 .dropdown {
     position: relative;

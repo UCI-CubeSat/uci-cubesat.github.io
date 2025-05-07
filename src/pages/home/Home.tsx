@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Home() {
     return (
         <>
-            <div className="welcome-fragment">
+            <div className="welcome-fragment fade-in">
                 <div className="welcome-description">
                     <h1>UCI CUBESAT</h1>
                     <h2>Pioneering Next-Gen Thermal Control Technology For Space Exploration.</h2>
@@ -19,7 +19,7 @@ export default function Home() {
                     </Link>
                 </div>
             </div>
-            <div className="stat-fragment">
+            <div className="stat-fragment fade-in">
                 <div id="left-card" className="card">
                     <h1>10+</h1>
                     <h2>Years In Progress</h2>
@@ -33,7 +33,7 @@ export default function Home() {
                     <h2>Members</h2>
                 </div>
             </div>
-            <div className="about-fragment">
+            <div className="about-fragment fade-in">
                 <div id="WWA-image-box">
                     <img src="/photos/Home_Page.png" style={{ width: "300px", height: "auto" }}/>
                 </div>
@@ -54,7 +54,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="sponsors-fragment card">
+            <div className="sponsors-fragment card fade-in">
                 <h1 id="sponsors-header">Our Sponsors</h1>
                 <div className="sponsor-row">
                     <div className="card">
