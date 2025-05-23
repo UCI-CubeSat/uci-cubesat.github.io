@@ -30,21 +30,9 @@ const MeetTheTeam = () => {
       image: "/Headshots/Erick.png",
     },
     {
-      name: "Abhigyan Arya",
+      name: "Cosmo Daniels",
       role: "Avionics",
       position: "Subteam Lead",
-      image: "",
-    },
-    {
-      name: "Sansshita Baskaran",
-      role: "Avionics",
-      position: "Hardware Lead",
-      image: "",
-    },
-    {
-      name: "Elian Hijmans Malessy",
-      role: "Avionics",
-      position: "Software Lead",
       image: "",
     },
     {
@@ -60,31 +48,7 @@ const MeetTheTeam = () => {
       image: "",
     },
     {
-      name: "Sahil Dhaktode",
-      role: "Avionics",
-      position: "Software",
-      image: "",
-    },
-    {
-      name: "Colton Kaneria",
-      role: "Avionics",
-      position: "Hardware",
-      image: "",
-    },
-    {
       name: "Rohit De",
-      role: "Avionics",
-      position: "Hardware",
-      image: "",
-    },
-    {
-      name: "Cosmo Daniels",
-      role: "Avionics",
-      position: "Hardware",
-      image: "",
-    },
-    {
-      name: "Andrew Liu",
       role: "Avionics",
       position: "Hardware",
       image: "",
@@ -96,31 +60,13 @@ const MeetTheTeam = () => {
       image: "",
     },
     {
-      name: "Alex Ikeda",
-      role: "Communications",
-      position: "Software",
-      image: "",
-    },
-    {
       name: "Jonathan Lin",
       role: "Communications",
-      position: "Hardware",
-      image: "",
-    },
-    {
-      name: "Navish Sinha",
-      role: "Communications",
-      position: "Hardware",
+      position: "Subteam Lead",
       image: "",
     },
     {
       name: "Styles Shortridge",
-      role: "Communications",
-      position: "Hardware",
-      image: "",
-    },
-    {
-      name: "Marc Raymundo",
       role: "Communications",
       position: "Hardware",
       image: "",
@@ -188,25 +134,13 @@ const MeetTheTeam = () => {
     {
       name: "Jenavieve Steward",
       role: "Power",
-      position: "Hardware",
+      position: "Subteam Lead",
       image: "",
     },
     {
       name: "Andy Li",
       role: "Power",
       position: "Hardware",
-      image: "",
-    },
-    {
-      name: "Mihir Mehta",
-      role: "Power",
-      position: "Software",
-      image: "",
-    },
-    {
-      name: "Hussain Mahuvawala",
-      role: "Power",
-      position: "Software",
       image: "",
     },
     {
