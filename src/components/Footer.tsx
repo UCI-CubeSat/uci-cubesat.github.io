@@ -5,7 +5,7 @@ import { GoArrowUpRight } from "react-icons/go";
 const Footer = () => {
     return (
         <>
-            <div>
+            <div id="footer">
                 <h1 id="connected-header">Stay Connected</h1>
                 <div className="socials-box">
                     <div className="icons-box">

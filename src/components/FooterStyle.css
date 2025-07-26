@@ -86,3 +86,30 @@ p {
 a {
     text-decoration: none;
 } 
+
+@media screen and (max-width: 400px){
+    /* #footer{
+        display: none;
+    } */
+
+    #connected-header {
+        font-size: 30px;
+        margin-bottom: 10%;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    #instagram-logo {
+        font-size: 20px;
+    }
+
+    #linkedin-logo {
+        font-size: 20px;
+    }
+
+    .socials-box {
+        margin-bottom: 20px;
+    }
+}
