@@ -35,9 +35,14 @@ p {
 }
 
 #instagram-logo {
+  transition: transform 0.18s cubic-bezier(.4,0,.2,1), color 0.18s cubic-bezier(.4,0,.2,1);
     color: white;
     font-size: 40px;
     margin-right: 15px;
+}
+#instagram-logo:hover {
+  transform: scale(1.16);
+  color: #E4405F;
 }
 
 #linkedin-box {
@@ -46,9 +51,14 @@ p {
 }
 
 #linkedin-logo {
+  transition: transform 0.18s cubic-bezier(.4,0,.2,1), color 0.18s cubic-bezier(.4,0,.2,1);
     color: #0077B5;
     font-size: 40px;
     margin-right: 15px;
+}
+#linkedin-logo:hover {
+  transform: scale(1.16);
+  color: #0077B5;
 }
 
 #joinus-arrow {

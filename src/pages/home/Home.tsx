@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function Home() {
     return (
         <>
-            <div className="welcome-fragment">
+            <div className="welcome-fragment fade-in">
                 <div className="welcome-description">
                     <h1>UCI CUBESAT</h1>
                     <h2>Pioneering Next-Gen Thermal Control Technology For Space Exploration.</h2>
@@ -19,6 +19,7 @@ export default function Home() {
                     </Link>
                 </div>
             </div>
+
             <div id="mobile-background">
                 <div className="stat-fragment">
                     <div id="left-card" className="card">
