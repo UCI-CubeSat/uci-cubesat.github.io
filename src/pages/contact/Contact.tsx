@@ -14,8 +14,8 @@ export default function Contact() {
                 <div id="header1"><h1>LET'S <span className="line"></span></h1></div>
                 <div id="header2"><h1><span className="line"></span> CONNECT</h1></div>
                 <div className="contacts">
-                    <h3>Project Lead: Shivank Valija
-                        @svaliya@uci.edu
+                    <h3>Project Manager: Sonia Cruze
+                        @scruze@uci.edu
                     </h3>
                     <h3>Advisor: Professor David Copp 
                         @dcopp@uci.edu</h3>

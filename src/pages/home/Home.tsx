@@ -11,8 +11,8 @@ export default function Home() {
                     <p>
                         Our mission is to design, test, and launch a modular nanosattelite
                         into low-Earth orbit. By working with cutting-edge thermal control
-                        technology with the ASPIN lab at UCI, we aim to set a standard for
-                        future student-led space mission and research at UCI.
+                        technology, we aim to set a standard for future student-led space
+                        mission and research at UCI.
                     </p>
                     <Link to="/aboutus/what-we-do">
                         <button>Read More</button>
