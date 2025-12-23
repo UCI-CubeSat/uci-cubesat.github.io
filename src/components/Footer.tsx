@@ -10,26 +10,25 @@ const Footer = () => {
                 <div className="socials-box">
                     <div className="icons-box">
                         <div id="instagram-box">
-                            <a href="https://www.instagram.com/ucicubesat?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                            <a href="https://www.instagram.com/ucicubesat" target="_blank" rel="noopener noreferrer">
                                 <FaInstagram id="instagram-logo"/>
                             </a>
-                            <a href="https://www.instagram.com/ucicubesat?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                            <a href="https://www.instagram.com/ucicubesat" target="_blank" rel="noopener noreferrer">
                                 <p>@ucicubesat</p>
                             </a>
                         </div>
                         <div id="linkedin-box">
-                            <a href="https://www.linkedin.com/company/uci-cubesat/">
+                            <a href="https://www.linkedin.com/company/uci-cubesat/" target="_blank" rel="noopener noreferrer">
                                 <FaLinkedin id="linkedin-logo"/>
                             </a>
                         </div>
                     </div>
                     <div className="contact-info">
-                        <div id="joinus-box">
+                        <a href="mailto:team.ucicubesat@gmail.com" id="joinus-box">
                             <p>Join Us</p>
                             <GoArrowUpRight id="joinus-arrow"/>
-                        </div>
+                        </a>
                         <p>Based in Irvine, CA</p>
-                        <p>team.ucicubesat@gmail.com</p>
                     </div>
                 </div>
             </div>

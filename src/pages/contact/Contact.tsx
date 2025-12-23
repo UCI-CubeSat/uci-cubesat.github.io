@@ -16,13 +16,14 @@ export default function Contact() {
                 <div id="header1"><h1>LET'S <span className="line"></span></h1></div>
                 <div id="header2"><h1><span className="line"></span> CONNECT</h1></div>
                 <div className="contacts">
-                    <h3>Project Manager: Sonia Cruze
-                        @scruze@uci.edu
+                    <h3>Project Manager: Sonia Cruze<br/>
+                        <a href="mailto:scruze@uci.edu">scruze@uci.edu</a>
                     </h3>
-                    <h3>Advisor: Professor David Copp 
-                        @dcopp@uci.edu</h3>
-                    <h3>Team:
-                        @team.ucicubesat@gmail.com
+                    <h3>Advisor: Professor David Copp<br/>
+                        <a href="mailto:dcopp@uci.edu">dcopp@uci.edu</a>
+                    </h3>
+                    <h3>Team:<br/>
+                        <a href="mailto:team.ucicubesat@gmail.com">team.ucicubesat@gmail.com</a>
                     </h3>
                 </div>
             </div>

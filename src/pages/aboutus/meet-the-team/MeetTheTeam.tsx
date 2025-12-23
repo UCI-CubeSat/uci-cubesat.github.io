@@ -6,10 +6,10 @@ const MeetTheTeam = () => {
   
   const teamMembers = [
     {
-      name: "Shivank Valiya",
+      name: "Sonia Cruze",
       role: "Executive",
       position: "Project Manager",
-      image: "",
+      image: "/Headshots/Sonia.png",
     },
     {
       name: "Alex Amadeo-Ranch",
@@ -180,10 +180,10 @@ const MeetTheTeam = () => {
       image: "",
     },
     {
-      name: "Sonia Cruze",
+      name: "Nicholas Lins",
       role: "Systems",
       position: "Subteam Lead",
-      image: "/Headshots/Sonia.png",
+      image: "",
     },
     {
       name: "Marco Cheng",
@@ -201,12 +201,6 @@ const MeetTheTeam = () => {
       name: "Xavier Marciano",
       role: "Systems",
       position: "Integration and Design",
-      image: "",
-    },
-    {
-      name: "Nicholas Lins",
-      role: "Systems",
-      position: "Software Architect",
       image: "",
     },
   ];
@@ -255,7 +249,7 @@ const MeetTheTeam = () => {
           </h1>
           <p>
             A driven set of undergraduates backed by industry leaders such as
-            Northrop Grumman and General Motors.
+            Northrop Grumman and General Atomics.
           </p>
         </div>
         <div className="roles-navigation">

@@ -7,12 +7,16 @@ import { IoCloseCircleSharp } from "react-icons/io5";
 import "./NavbarStyle.css";
 
 const Navbar = () => {
-    const [isHovered, setIsHovered] = useState(false);
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
       };
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
 
     return (
         <>
@@ -21,7 +25,7 @@ const Navbar = () => {
                     <Link to="/home">
                         <img
                             src="/images/CubeSat_logo.png"
-                            alt="CubeSat logo"
+                            alt="UCI CubeSat logo"
                             width={120}
                             height={120}
                         />
@@ -36,16 +40,16 @@ const Navbar = () => {
 
                     <div
                         className="dropdown"
-                        onMouseEnter={() => setIsHovered(true)}
-                        onMouseLeave={() => setIsHovered(false)}
+                        onMouseEnter={() => setIsDropdownOpen(true)}
+                        onMouseLeave={() => setIsDropdownOpen(false)}
                     >
-                        <button className="navbtn">About Us</button>
-                        {isHovered && (
+                        <button className="navbtn" onClick={toggleDropdown}>About Us</button>
+                        {isDropdownOpen && (
                             <div className="dropdown-content">
-                                <Link to="/aboutus/what-we-do" className="dropdown-item">
+                                <Link to="/aboutus/what-we-do" className="dropdown-item" onClick={() => setIsDropdownOpen(false)}>
                                     What We Do
                                 </Link>
-                                <Link to="/aboutus/meet-the-team" className="dropdown-item">
+                                <Link to="/aboutus/meet-the-team" className="dropdown-item" onClick={() => setIsDropdownOpen(false)}>
                                     Meet the Team
                                 </Link>
                             </div>
@@ -62,7 +66,7 @@ const Navbar = () => {
                     <Link to="/home">
                         <img
                             src="/images/CubeSat_logo.png"
-                            alt="CubeSat logo"
+                            alt="UCI CubeSat logo"
                             width={70}
                             height={70}
                         />
