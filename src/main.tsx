@@ -6,7 +6,6 @@ import './index.css'
 
 // Import pages
 import Home from './pages/home/Home'
-import AboutUs from './pages/aboutus/AboutUs'
 import Contact from './pages/contact/Contact'
 import WhatWeDo from './pages/aboutus/what-we-do/WhatWeDo'
 import MeetTheTeam from './pages/aboutus/meet-the-team/MeetTheTeam'
