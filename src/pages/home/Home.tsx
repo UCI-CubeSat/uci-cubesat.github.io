@@ -1,7 +1,13 @@
 import './Home.css';
 import { Link } from 'react-router-dom';
+import { useScrollAnimation } from '../../hooks/useScrollAnimation';
+import { CountUp } from '../../components/CountUp';
 
 export default function Home() {
+    const statsAnimation = useScrollAnimation<HTMLDivElement>();
+    const aboutAnimation = useScrollAnimation<HTMLDivElement>();
+    const sponsorsAnimation = useScrollAnimation<HTMLDivElement>();
+
     return (
         <>
             <div className="welcome-fragment fade-in">
@@ -21,9 +27,12 @@ export default function Home() {
             </div>
 
             <div id="mobile-background">
-                <div className="stat-fragment">
+                <div 
+                    ref={statsAnimation.ref}
+                    className={`stat-fragment animate-on-scroll ${statsAnimation.isVisible ? 'visible' : ''}`}
+                >
                     <div id="left-card" className="card">
-                        <h1>10+</h1>
+                        <CountUp end={10} suffix="+" duration={4} />
                         <h2>Years In Progress</h2>
                     </div>
                     <div id="mid-card" className="card">
@@ -31,11 +40,14 @@ export default function Home() {
                         <h2>Anticipated Launch</h2>
                     </div>
                     <div id="right-card" className="card">
-                        <h1>200+</h1>
+                        <CountUp end={200} suffix="+" duration={4} />
                         <h2>Members</h2>
                     </div>
                 </div>
-                <div className="about-fragment">
+                <div 
+                    ref={aboutAnimation.ref}
+                    className={`about-fragment animate-on-scroll ${aboutAnimation.isVisible ? 'visible' : ''}`}
+                >
                     <div id="WWA-image-box">
                         <img src="/photos/Home_Page.png" style={{ width: "300px", height: "auto" }}/>
                     </div>
@@ -60,7 +72,10 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="sponsors-fragment card">
+                <div 
+                    ref={sponsorsAnimation.ref}
+                    className={`sponsors-fragment card animate-on-scroll ${sponsorsAnimation.isVisible ? 'visible' : ''}`}
+                >
                     <h1 id="sponsors-header">Our Sponsors</h1>
                     <div className="sponsor-row">
                         <div className="card">

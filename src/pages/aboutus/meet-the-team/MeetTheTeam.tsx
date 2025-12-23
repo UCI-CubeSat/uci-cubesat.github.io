@@ -270,15 +270,15 @@ const MeetTheTeam = () => {
                 {member.image ? (
                   <img src={member.image} alt={member.name} />
                 ) : (
-                  <div>Placeholder</div>
+                  <div className="initials-placeholder">
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </div>
                 )}
               </div>
               <div className="member-info">
                 <h3>{member.role}</h3>
                 <p className="position">{member.position}</p>
-                <a href={`#${member.name.replace(" ", "-").toLowerCase()}`}>
-                  {member.name}
-                </a>
+                <span className="member-name">{member.name}</span>
               </div>
             </div>
           ))}

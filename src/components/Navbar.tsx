@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { IoCloseCircleSharp } from "react-icons/io5";
 
@@ -9,6 +9,7 @@ import "./NavbarStyle.css";
 const Navbar = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const location = useLocation();
 
     const toggleMobileMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -16,6 +17,13 @@ const Navbar = () => {
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
+    };
+
+    const isActive = (path: string) => {
+        if (path === '/home') {
+            return location.pathname === '/home' || location.pathname === '/';
+        }
+        return location.pathname.startsWith(path);
     };
 
     return (
@@ -35,7 +43,7 @@ const Navbar = () => {
                 {/* Desktop NavBar */}
                 <div className="btnbox">
                     <Link to="/home">
-                        <button className="navbtn">Home</button>
+                        <button className={`navbtn ${isActive('/home') ? 'active' : ''}`}>Home</button>
                     </Link>
 
                     <div
@@ -43,7 +51,7 @@ const Navbar = () => {
                         onMouseEnter={() => setIsDropdownOpen(true)}
                         onMouseLeave={() => setIsDropdownOpen(false)}
                     >
-                        <button className="navbtn" onClick={toggleDropdown}>About Us</button>
+                        <button className={`navbtn ${isActive('/aboutus') ? 'active' : ''}`} onClick={toggleDropdown}>About Us</button>
                         {isDropdownOpen && (
                             <div className="dropdown-content">
                                 <Link to="/aboutus/what-we-do" className="dropdown-item" onClick={() => setIsDropdownOpen(false)}>
@@ -57,7 +65,7 @@ const Navbar = () => {
                     </div>
 
                     <Link to="/contact">
-                        <button className="navbtn">Contact</button>
+                        <button className={`navbtn ${isActive('/contact') ? 'active' : ''}`}>Contact</button>
                     </Link>
                 </div>
             </div>
