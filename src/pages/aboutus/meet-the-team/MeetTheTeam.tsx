@@ -12,12 +12,6 @@ const MeetTheTeam = () => {
       image: "/Headshots/Sonia.png",
     },
     {
-      name: "Alex Amadeo-Ranch",
-      role: "Executive",
-      position: "Chief Integration Officer",
-      image: "/Headshots/Alex_R.png",
-    },
-    {
       name: "Praneet Iddamsetty",
       role: "Executive",
       position: "Chief Software Engineer",
