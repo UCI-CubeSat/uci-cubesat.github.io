@@ -23,7 +23,7 @@ export const links: LinksFunction = () => [
     rel: "stylesheet",
     href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap",
   },
-  { rel: "icon", type: "image/png", href: "/images/CubeSat_logo_nav.png" },
+  { rel: "icon", type: "image/png", href: "/images/logov2.png" },
 ];
 
 export const meta: MetaFunction = () => [
@@ -45,7 +45,7 @@ const jsonLd = {
   "@type": "Organization",
   name: "UCI CubeSat",
   url: "https://ucicubesat.com",
-  logo: "https://ucicubesat.com/images/CubeSat_logo_nav.png",
+  logo: "https://ucicubesat.com/images/logov2.png",
   description:
     "A student-led organization at UC Irvine dedicated to designing, building, and launching a 2U nanosatellite into Low Earth Orbit.",
   address: {
