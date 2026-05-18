@@ -39,8 +39,6 @@ export const meta: MetaFunction = () => [
 export default function Home() {
   const statsAnimation = useScrollAnimation<HTMLElement>();
   const aboutAnimation = useScrollAnimation<HTMLElement>();
-  const missionAnimation = useScrollAnimation<HTMLElement>();
-  const satAnimation = useScrollAnimation<HTMLDivElement>();
   const sponsorsAnimation = useScrollAnimation<HTMLElement>();
 
   return (
@@ -121,54 +119,6 @@ export default function Home() {
             className="text-[48px] font-semibold text-primary leading-none max-sm:text-[36px]"
           />
           <span className="text-sm text-muted">Members</span>
-        </div>
-      </section>
-
-      <section
-        ref={missionAnimation.ref}
-        className={`relative section-glow-atmosphere flex items-center justify-center gap-16 py-24 px-10 max-w-[1200px] mx-auto max-sm:flex-col-reverse max-sm:py-16 max-sm:px-6 max-sm:gap-10 animate-on-scroll ${missionAnimation.isVisible ? "visible" : ""}`}
-      >
-        <div className="max-w-[460px]">
-          <p className="text-xs font-medium tracking-[0.15em] uppercase text-earth mb-4">
-            Our Mission
-          </p>
-          <h2 className="font-semibold text-[40px] text-primary m-0 mb-5 max-sm:text-[30px]">
-            AntSat 01
-          </h2>
-          <p className="text-[15px] leading-[1.7] text-muted m-0 mb-4">
-            At UCI CubeSat, we are developing, testing, and launching AntSat 01, a
-            2U CubeSat, into Low Earth Orbit (LEO) to conduct groundbreaking
-            research. Our mission focuses on testing the Variable Emissivity
-            Device (VED), a cutting-edge technology for cost-effective
-            spacecraft thermal regulation.
-          </p>
-          <p className="text-[15px] leading-[1.7] text-muted m-0 mb-4">
-            By evaluating AntSat 01's performance in orbit, we gather critical data
-            that will drive future innovations in microsatellite design and
-            performance.
-          </p>
-          <Link
-            to="/aboutus/what-we-do"
-            className="inline-block text-[15px] font-medium text-earth mt-2 transition-colors hover:text-atmosphere"
-          >
-            Explore Subsystems →
-          </Link>
-        </div>
-        <div className="shrink-0 relative">
-          <div className="absolute inset-0 rounded-full bg-atmosphere/5 blur-3xl scale-110 pointer-events-none" />
-          <div
-            ref={satAnimation.ref}
-            className={`sat-entrance ${satAnimation.isVisible ? "visible floating" : ""}`}
-          >
-            <img
-              src="/renders/antsat01.png"
-              alt="AntSat 01 satellite render"
-              width={420}
-              height={420}
-              loading="lazy"
-              className="block max-w-[420px] h-auto drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] max-sm:max-w-[240px]"
-            />
-          </div>
         </div>
       </section>
 

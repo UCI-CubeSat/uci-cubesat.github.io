@@ -1,5 +1,4 @@
 import { Canvas, useThree } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
 import { Suspense, useEffect, useMemo, useRef, useState, type MutableRefObject, type RefObject } from "react";
 import * as THREE from "three";
 import { ExplodedAssembly } from "./ExplodedAssembly";
@@ -94,7 +93,7 @@ export function Scene({ sectionRef, reducedMotion }: SceneProps) {
 
   return (
     <Canvas
-      frameloop="demand"
+      frameloop="always"
       dpr={dprCap}
       gl={{ antialias: true, powerPreference: "high-performance" }}
       camera={{ position: [0.32, 0.18, 0.42], fov: 32, near: 0.01, far: 10 }}
@@ -103,15 +102,15 @@ export function Scene({ sectionRef, reducedMotion }: SceneProps) {
         gl.toneMappingExposure = 1.15;
         gl.outputColorSpace = THREE.SRGBColorSpace;
       }}
-      style={{ touchAction: "manipulation" }}
+      style={{ width: "100%", height: "100%", touchAction: "manipulation" }}
     >
       <CameraRig isMobile={isMobile} />
       <ScrollDriver sectionRef={sectionRef} progressRef={progressRef} />
-      <ambientLight intensity={0.35} />
-      <directionalLight position={[2, 3, 2]} intensity={1.1} />
-      <directionalLight position={[-2, 1, -1.5]} intensity={0.35} color="#7FB6FF" />
+      <ambientLight intensity={0.7} />
+      <hemisphereLight args={["#d8ecff", "#0b1020", 0.7]} />
+      <directionalLight position={[2, 3, 2]} intensity={1.45} />
+      <directionalLight position={[-2, 1, -1.5]} intensity={0.65} color="#7FB6FF" />
       <Suspense fallback={null}>
-        <Environment preset="city" background={false} />
         <ExplodedAssembly progressRef={progressRef} reducedMotion={reducedMotion} />
       </Suspense>
     </Canvas>

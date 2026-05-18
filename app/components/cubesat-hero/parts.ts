@@ -9,6 +9,7 @@ export type CategoryId =
   | "antenna"
   | "burnwire"
   | "deployable"
+  | "skeleton"
   | "chassis";
 
 interface CategoryConfig {
@@ -19,17 +20,18 @@ interface CategoryConfig {
 }
 
 export const CATEGORIES: CategoryConfig[] = [
-  { id: "screw",      pattern: /screw|^pin[-_]\d/i,                                    distanceScale: 1.4, phase: { start: 0.10, end: 0.35 } },
-  { id: "hinge",      pattern: /hinge|torsion/i,                                       distanceScale: 1.2, phase: { start: 0.20, end: 0.50 } },
-  { id: "panel",      pattern: /solar[\s_]panel/i,                                     distanceScale: 1.6, phase: { start: 0.30, end: 0.60 } },
-  { id: "topPlate",   pattern: /top[\s_]plate|cover[\s_]plate|vedskin/i,               distanceScale: 1.5, phase: { start: 0.35, end: 0.65 } },
-  { id: "standoff",   pattern: /standoff/i,                                            distanceScale: 1.0, phase: { start: 0.50, end: 0.80 } },
-  { id: "pcb",        pattern: /pcb|powerboard|mahogeneyboard|magnetorquer/i,          distanceScale: 1.0, phase: { start: 0.55, end: 0.85 } },
-  { id: "isolator",   pattern: /vibration[\s_]isolator/i,                              distanceScale: 1.1, phase: { start: 0.65, end: 0.95 } },
-  { id: "antenna",    pattern: /antenna/i,                                             distanceScale: 1.8, phase: { start: 0.80, end: 1.00 } },
-  { id: "burnwire",   pattern: /burnwire/i,                                            distanceScale: 1.8, phase: { start: 0.80, end: 1.00 } },
-  { id: "deployable", pattern: /^panel\d/i,                                            distanceScale: 1.4, phase: { start: 0.30, end: 0.60 } },
-  { id: "chassis",    pattern: /chassis|baseplate|bracket|skel[\s_]/i,                 distanceScale: 0.0, phase: { start: 0.00, end: 0.00 } },
+  { id: "skeleton",   pattern: /chassis[\s_-]?skeleton/i,                              distanceScale: 0.0, phase: { start: 0.00, end: 0.00 } },
+  { id: "screw",      pattern: /screw|^pin[-_]\d/i,                                    distanceScale: 1.4, phase: { start: 0.10, end: 0.42 } },
+  { id: "hinge",      pattern: /hinge|torsion/i,                                       distanceScale: 1.2, phase: { start: 0.10, end: 0.50 } },
+  { id: "panel",      pattern: /solar[\s_]panel/i,                                     distanceScale: 1.7, phase: { start: 0.10, end: 0.68 } },
+  { id: "deployable", pattern: /^panel\d/i,                                            distanceScale: 1.55, phase: { start: 0.10, end: 0.68 } },
+  { id: "topPlate",   pattern: /top[\s_]?plate|cover[\s_]plate|vedskin/i,              distanceScale: 1.5, phase: { start: 0.18, end: 0.68 } },
+  { id: "standoff",   pattern: /standoff/i,                                            distanceScale: 0.95, phase: { start: 0.28, end: 0.78 } },
+  { id: "pcb",        pattern: /pcb|powerboard|mahogeneyboard|magnetorquer|comms|xcvr/i, distanceScale: 1.05, phase: { start: 0.30, end: 0.82 } },
+  { id: "isolator",   pattern: /vibration[\s_]isolator/i,                              distanceScale: 1.1, phase: { start: 0.42, end: 0.90 } },
+  { id: "antenna",    pattern: /antenna/i,                                             distanceScale: 1.75, phase: { start: 0.50, end: 0.96 } },
+  { id: "burnwire",   pattern: /burnwire/i,                                            distanceScale: 1.65, phase: { start: 0.50, end: 0.96 } },
+  { id: "chassis",    pattern: /baseplate|bracket|skel[\s_]/i,                         distanceScale: 0.65, phase: { start: 0.28, end: 0.78 } },
 ];
 
 export function classify(name: string): CategoryId | null {

@@ -1,8 +1,36 @@
-import { Suspense, lazy, useEffect, useRef, useState } from "react";
+import { Component, Suspense, lazy, useEffect, useRef, useState, type ErrorInfo, type ReactNode } from "react";
+import { Link } from "react-router";
 import { ClientOnly } from "./ClientOnly";
 import { HeroFallback } from "./HeroFallback";
 
 const Scene = lazy(() => import("./Scene").then((m) => ({ default: m.Scene })));
+
+interface SceneBoundaryProps {
+  children: ReactNode;
+  fallback: ReactNode;
+}
+
+interface SceneBoundaryState {
+  hasError: boolean;
+}
+
+class SceneBoundary extends Component<SceneBoundaryProps, SceneBoundaryState> {
+  state: SceneBoundaryState = { hasError: false };
+
+  static getDerivedStateFromError(): SceneBoundaryState {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: unknown, errorInfo: ErrorInfo) {
+    if (import.meta.env.DEV) {
+      console.error("[CubesatHero] 3D scene failed to render", error, errorInfo);
+    }
+  }
+
+  render() {
+    return this.state.hasError ? this.props.fallback : this.props.children;
+  }
+}
 
 function usePrefersReducedMotion(): boolean {
   const [prefers, setPrefers] = useState(false);
@@ -37,24 +65,39 @@ export function CubesatHero() {
         <div className="absolute inset-0 z-[1]">
           <ClientOnly fallback={<HeroFallback />}>
             {() => (
-              <Suspense fallback={<HeroFallback />}>
-                <Scene sectionRef={sectionRef} reducedMotion={reducedMotion} />
-              </Suspense>
+              <SceneBoundary fallback={<HeroFallback />}>
+                <Suspense fallback={<HeroFallback />}>
+                  <Scene sectionRef={sectionRef} reducedMotion={reducedMotion} />
+                </Suspense>
+              </SceneBoundary>
             )}
           </ClientOnly>
         </div>
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 z-[2] flex flex-col items-center px-6 pt-20 text-center max-sm:pt-14"
-        >
-          <p className="text-xs font-medium tracking-[0.3em] uppercase text-earth mb-3">
-            The Hardware
-          </p>
-          <h2 className="font-semibold text-[40px] text-primary leading-tight m-0 max-sm:text-[28px]">
-            Inside AntSat 01
-          </h2>
-          <p className="mt-3 text-sm leading-[1.6] text-muted max-w-md mx-auto max-sm:text-[13px]">
-            Scroll to disassemble — 69 parts across 11 subsystems.
-          </p>
+        <div className="pointer-events-none absolute inset-0 z-[2]">
+          <div className="mx-auto flex h-full max-w-[1200px] items-center px-8 pt-16 max-md:items-start max-md:px-6 max-md:pt-24">
+            <div className="max-w-[430px] text-left drop-shadow-[0_18px_34px_rgba(0,0,0,0.45)]">
+              <p className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-earth">
+                Our Mission
+              </p>
+              <h2 className="m-0 mb-5 text-[44px] font-semibold leading-tight text-primary max-sm:text-[32px]">
+                AntSat 01
+              </h2>
+              <p className="m-0 mb-4 text-[15px] leading-[1.75] text-muted max-sm:text-[14px]">
+                UCI CubeSat is developing, testing, and launching a 2U nanosatellite into Low Earth Orbit to
+                validate the Variable Emissivity Device, a thermal regulation payload built for compact spacecraft.
+              </p>
+              <p className="m-0 mb-6 text-[15px] leading-[1.75] text-muted max-sm:hidden">
+                The exploded model shows the flight hardware stack: deployable panels, avionics boards,
+                communications hardware, standoffs, antenna hardware, and the chassis structure that carries the mission.
+              </p>
+              <Link
+                to="/aboutus/what-we-do"
+                className="pointer-events-auto inline-block text-[15px] font-medium text-earth transition-colors hover:text-atmosphere"
+              >
+                Explore Subsystems -&gt;
+              </Link>
+            </div>
+          </div>
         </div>
         <div
           className="absolute inset-x-0 top-0 z-[1] h-24 pointer-events-none"
