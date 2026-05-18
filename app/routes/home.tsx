@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import type { MetaFunction } from "react-router";
 import { useScrollAnimation } from "~/hooks/useScrollAnimation";
 import { CountUp } from "~/components/CountUp";
+import { CubesatHero } from "~/components/cubesat-hero/CubesatHero";
 
 export const meta: MetaFunction = () => [
   { title: "UCI CubeSat" },
@@ -96,9 +97,11 @@ export default function Home() {
         </div>
       </section>
 
+      <CubesatHero />
+
       <section
         ref={statsAnimation.ref}
-        className={`relative z-[3] -mt-24 flex items-center justify-center gap-16 py-16 px-6 max-sm:gap-10 max-sm:py-12 animate-on-scroll ${statsAnimation.isVisible ? "visible" : ""}`}
+        className={`relative z-[3] flex items-center justify-center gap-16 py-16 px-6 max-sm:gap-10 max-sm:py-12 animate-on-scroll ${statsAnimation.isVisible ? "visible" : ""}`}
       >
         <div className="flex flex-col items-center gap-1">
           <CountUp
