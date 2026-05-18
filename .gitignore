@@ -21,3 +21,5 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+.claude/worktrees/elastic-meninsky-a6db6a/
+.claude/worktrees/strange-chatterjee-eca19e/
